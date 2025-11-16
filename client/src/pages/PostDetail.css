@@ -1,0 +1,139 @@
+.post-detail {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.post-content {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.post-category-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.post-content h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #1F2937;
+}
+
+.post-meta {
+  display: flex;
+  gap: 10px;
+  color: #6B7280;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.post-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.post-body {
+  line-height: 1.8;
+  font-size: 18px;
+  color: #374151;
+  margin: 30px 0;
+  white-space: pre-wrap;
+}
+
+.post-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #E5E7EB;
+}
+
+.tag {
+  background-color: #F3F4F6;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 14px;
+  color: #6B7280;
+}
+
+.comments-section {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comments-section h2 {
+  margin-bottom: 20px;
+  color: #1F2937;
+}
+
+.comment-form {
+  margin-bottom: 30px;
+}
+
+.comment-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #D1D5DB;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.login-prompt {
+  text-align: center;
+  padding: 20px;
+  background-color: #F3F4F6;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.login-prompt a {
+  color: #3B82F6;
+  font-weight: 500;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.comment {
+  padding: 15px;
+  background-color: #F9FAFB;
+  border-radius: 5px;
+}
+
+.comment-author {
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 5px;
+}
+
+.comment-content {
+  color: #374151;
+  margin-bottom: 5px;
+}
+
+.comment-date {
+  font-size: 12px;
+  color: #9CA3AF;
+}
+
+.no-comments {
+  text-align: center;
+  color: #6B7280;
+  padding: 20px;
+}

@@ -1,78 +1,173 @@
-# MERN Stack Integration Assignment
+# MERN Stack Blog Application
 
-This assignment focuses on building a full-stack MERN (MongoDB, Express.js, React.js, Node.js) application that demonstrates seamless integration between front-end and back-end components.
+A full-stack blog application built with MongoDB, Express.js, React.js, and Node.js.
 
-## Assignment Overview
+## Features
 
-You will build a blog application with the following features:
-1. RESTful API with Express.js and MongoDB
-2. React front-end with component architecture
-3. Full CRUD functionality for blog posts
-4. User authentication and authorization
-5. Advanced features like image uploads and comments
+### Backend
+- RESTful API with Express.js
+- MongoDB database with Mongoose ODM
+- JWT authentication
+- User registration and login
+- Role-based authorization (user/admin)
+- Input validation with express-validator
+- Image upload with Multer
+- Comment system
+- Search and filtering
+- Pagination support
+
+### Frontend
+- React 18 with Hooks
+- React Router for navigation
+- Context API for state management
+- Responsive design
+- User authentication flow
+- CRUD operations for posts
+- Comment functionality
+- Category filtering
+- Clean and modern UI
 
 ## Project Structure
 
 ```
 mern-blog/
-├── client/                 # React front-end
-│   ├── public/             # Static files
-│   ├── src/                # React source code
-│   │   ├── components/     # Reusable components
-│   │   ├── pages/          # Page components
-│   │   ├── hooks/          # Custom React hooks
-│   │   ├── services/       # API services
-│   │   ├── context/        # React context providers
-│   │   └── App.jsx         # Main application component
-│   └── package.json        # Client dependencies
-├── server/                 # Express.js back-end
-│   ├── config/             # Configuration files
-│   ├── controllers/        # Route controllers
-│   ├── models/             # Mongoose models
-│   ├── routes/             # API routes
-│   ├── middleware/         # Custom middleware
-│   ├── utils/              # Utility functions
-│   ├── server.js           # Main server file
-│   └── package.json        # Server dependencies
-└── README.md               # Project documentation
+├── server/              # Backend
+│   ├── models/         # Mongoose models
+│   ├── routes/         # API routes
+│   ├── middleware/     # Custom middleware
+│   ├── uploads/        # Uploaded images
+│   └── server.js       # Entry point
+└── client/             # Frontend
+    └── src/
+        ├── components/ # Reusable components
+        ├── pages/      # Page components
+        ├── context/    # Context providers
+        ├── services/   # API services
+        └── hooks/      # Custom hooks
 ```
 
-## Getting Started
+## Setup Instructions
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week4-Assignment.md` file
-4. Complete the tasks outlined in the assignment
+### Prerequisites
+- Node.js (v18+)
+- MongoDB (running locally or MongoDB Atlas)
 
-## Files Included
+### Backend Setup
 
-- `Week4-Assignment.md`: Detailed assignment instructions
-- Starter code for both client and server:
-  - Basic project structure
-  - Configuration files
-  - Sample models and components
+1. Navigate to server directory:
+```bash
+cd server
+```
 
-## Requirements
+2. Install dependencies:
+```bash
+npm install
+```
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Git
+3. Create `.env` file:
+```bash
+cp .env.example .env
+```
 
-## Submission
+4. Update `.env` with your configuration:
+```
+PORT=5000
+NODE_ENV=development
+MONGODB_URI=mongodb://localhost:27017/mern-blog
+JWT_SECRET=your_secret_key
+JWT_EXPIRE=7d
+CLIENT_URL=http://localhost:5173
+```
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+5. Start the server:
+```bash
+npm run dev
+```
 
-1. Complete both the client and server portions of the application
-2. Implement all required API endpoints
-3. Create the necessary React components and hooks
-4. Document your API and setup process in the README.md
-5. Include screenshots of your working application
+### Frontend Setup
 
-## Resources
+1. Navigate to client directory:
+```bash
+cd client
+```
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [Express.js Documentation](https://expressjs.com/)
-- [React Documentation](https://react.dev/)
-- [Node.js Documentation](https://nodejs.org/en/docs/)
-- [Mongoose Documentation](https://mongoosejs.com/docs/) 
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Create `.env` file:
+```bash
+cp .env.example .env
+```
+
+4. Update `.env`:
+```
+VITE_API_URL=http://localhost:5000/api
+```
+
+5. Start the development server:
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:5173`
+
+## API Endpoints
+
+### Authentication
+- `POST /api/auth/register` - Register new user
+- `POST /api/auth/login` - Login user
+- `GET /api/auth/me` - Get current user (protected)
+
+### Posts
+- `GET /api/posts` - Get all posts (with pagination)
+- `GET /api/posts/search?q=query` - Search posts
+- `GET /api/posts/:id` - Get single post
+- `POST /api/posts` - Create post (protected)
+- `PUT /api/posts/:id` - Update post (protected)
+- `DELETE /api/posts/:id` - Delete post (protected)
+- `POST /api/posts/:id/comments` - Add comment (protected)
+- `POST /api/posts/upload` - Upload image (protected)
+
+### Categories
+- `GET /api/categories` - Get all categories
+- `POST /api/categories` - Create category (admin only)
+
+## Technologies Used
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT (jsonwebtoken)
+- bcryptjs
+- express-validator
+- Multer
+- CORS
+
+### Frontend
+- React 18
+- React Router DOM
+- Axios
+- Vite
+- CSS3
+
+## Features Implemented
+
+✅ User authentication (register/login)
+✅ Protected routes
+✅ Create, read, update, delete posts
+✅ Comment system
+✅ Category management
+✅ Image uploads
+✅ Search functionality
+✅ Pagination
+✅ Input validation
+✅ Error handling
+✅ Responsive design
+
+## License
+
+MIT
